@@ -1,0 +1,73 @@
+
+class Navbar {
+
+    render() {
+        document.querySelector('#header').innerHTML = this.getContent(JSON.parse(localStorage.language));
+
+        const circle = document.querySelector('.material-btn');
+        const link = document.querySelector('.material-content').querySelectorAll('li');
+        const hamburger = document.querySelector('.material-hamburger');
+        const main = document.querySelector('main');
+
+        circle.addEventListener(
+            'click',
+            event => {
+                circle.classList.toggle('active');
+                hamburger.classList.toggle('material-close');
+                main.classList.toggle('active');
+
+                for (const item of link)
+                    item.classList.toggle('active');
+
+                event.preventDefault();
+                event.stopImmediatePropagation();
+            },
+            false
+        );
+
+        window.addEventListener(
+            'click',
+             () => {
+                 if (circle.classList.contains('active')) {
+                     circle.classList.remove('active');
+
+                     for (const item of link )
+                         item.classList.toggle('active');
+
+                     hamburger.classList.remove('material-close');
+                     main.classList.remove('active');
+                 }},
+            false
+        );
+    }
+
+    getContent(lang) {
+        return `
+            <div class="material-menu-wrapper">
+              <div class="material-menu">
+                <div class="material-btn">
+                  <div class="material-hamburger">
+                    <div class="material-patty"></div>
+                    <div class="material-patty"></div>
+                    <div class="material-patty"></div>
+                  </div>
+                </div>
+                <div class="material-content">
+                  <nav>
+                    <ul>
+                      <li><a href="#home">${lang.home.menu}</a></li>
+                      <li><a href="#coin">${lang.coin.menu}</a></li>
+                      <li><a href="#random">${lang.randomNumber.menu}</a></li>
+                      <li><a href="#ball">${lang.magicBall.menu}</a></li>
+                      <li><a href="#match">${lang.match.menu}</a></li>
+                      <li><a href="#crossroads">${lang.crossroads.menu}</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>    
+        `
+    }
+}
+
+export default new Navbar();
