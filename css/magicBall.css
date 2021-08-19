@@ -1,0 +1,57 @@
+#magicBallImg {
+    background-image: url("../figures/ball.png");
+    background-position: center;
+    background-size: cover;
+    width: 290px;
+    height: 285px;
+    text-align: center;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#answer {
+    visibility: hidden;
+    background: #fff;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 5px;
+    color: #333
+}
+
+#magicBallForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+#question {
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.shaking {
+    animation: shake 1s ease-in-out forwards;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+
+    20% { transform: translateX(20px); }
+
+    40% { transform: translateX(-20px); }
+
+    60% { transform: translateX(20px); }
+
+    80% { transform: translateX(-20px); }
+
+    100% { transform: translateX(0); }
+}
