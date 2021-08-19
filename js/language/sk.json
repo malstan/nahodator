@@ -1,0 +1,35 @@
+{
+  "home": {
+    "menu": "Domov",
+    "title": "Nahodator 5684",
+    "info": "Nahodator ti pomôže rozhodnúť sa v rôznych situáciách.",
+    "warning": "Neberieme zodpovednosť za psychické, fyzické, majetkové a ďalšie iné škody spôsobené konaním na základe vygenerovanej hodnoty."
+  },
+  "coin": {
+    "menu": "Minca",
+    "button": "Zatoč"
+  },
+  "randomNumber": {
+    "menu": "Náhodné číslo",
+    "getNumber": "Daj číslo",
+    "missingNumber": "Chýba číslo",
+    "numberMishmash": "Čísla sú opačne",
+    "largeNumber": "Veľmi veľké číslo"
+  },
+  "magicBall": {
+    "menu": "Magic 8 Ball",
+    "ballButton": "Zatras",
+    "question": "Opýtaj sa otázku",
+    "answers": [
+      "Je to isté.", "Je to rozhodne tak.", "Bezpochýb.", "Áno, určite.", "Spoľahni sa.", "Ako vidím, áno.", "Pravdepodobne.", "Vyzerá to dobre.", "Áno.", "Znamenia ukazujú na áno.",
+      "Je to zahmlené.", "Skús neskôr.", "Teraz radšej nepoviem.", "Teraz sa nedá predpovedať.", "Sústreď sa a spýtaj sa znova.",
+      "Nerátaj s tým.", "Moja odpoveď je nie.", "Moje zdroje tvrdia nie.", "Nevyzerá to dobre.", "Veľmi pochybné."
+    ]
+  },
+  "match": {
+    "menu": "Zápalky"
+  },
+  "crossroads": {
+    "menu": "Križovatka"
+  }
+}

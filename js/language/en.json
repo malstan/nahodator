@@ -1,0 +1,22 @@
+{
+  "home": {
+    "menu": "Home",
+    "title": "Randomator",
+    "warning": ""
+  },
+  "coin": {
+    "menu": "Coin"
+  },
+  "randomNumber": {
+    "menu": "Random Number"
+  },
+  "magicBall": {
+    "menu": "Magic 8 Ball"
+  },
+  "match": {
+    "menu": "Match"
+  },
+  "crossroads": {
+    "menu": "Crossroads"
+  }
+}
