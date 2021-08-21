@@ -5,6 +5,7 @@ class Navbar {
         document.querySelector('#header').innerHTML = this.getContent(JSON.parse(localStorage.language));
 
         const circle = document.querySelector('.material-btn');
+        const content = document.querySelector('.material-content');
         const link = document.querySelector('.material-content').querySelectorAll('li');
         const hamburger = document.querySelector('.material-hamburger');
         const main = document.querySelector('main');
@@ -13,6 +14,7 @@ class Navbar {
             'click',
             event => {
                 circle.classList.toggle('active');
+                content.classList.toggle('active');
                 hamburger.classList.toggle('material-close');
                 main.classList.toggle('active');
 
@@ -29,13 +31,17 @@ class Navbar {
             'click',
              () => {
                  if (circle.classList.contains('active')) {
-                     circle.classList.remove('active');
 
                      for (const item of link )
                          item.classList.toggle('active');
 
-                     hamburger.classList.remove('material-close');
-                     main.classList.remove('active');
+                     setTimeout(() => {
+                         circle.classList.remove('active');
+                         hamburger.classList.remove('material-close');
+                         main.classList.remove('active');
+                         content.classList.remove('active');
+                     },
+                         700);
                  }},
             false
         );
@@ -59,7 +65,7 @@ class Navbar {
                       <li><a href="#coin">${lang.coin.menu}</a></li>
                       <li><a href="#random">${lang.randomNumber.menu}</a></li>
                       <li><a href="#ball">${lang.magicBall.menu}</a></li>
-                      <li><a href="#match">${lang.match.menu}</a></li>
+                      <li><a href="#match">${lang.matches.menu}</a></li>
                       <li><a href="#crossroads">${lang.crossroads.menu}</a></li>
                     </ul>
                   </nav>

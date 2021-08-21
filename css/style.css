@@ -31,7 +31,6 @@ main {
     font-family: Roboto, sans-serif;
     color: #d5d5d5;
     font-size: 1.3rem;
-    padding: 7rem;
 }
 
 .container p {
@@ -46,8 +45,9 @@ main {
     padding: 13px 18px;
     margin-top: 5rem;
     cursor: pointer;
-    color: #fff;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    color: #333;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.35s ease-out;
 }
 
 .primary:hover {
@@ -79,14 +79,14 @@ input {
 }
 
 
-@media screen and(max-width: 750px) {
+@media only screen and(max-width: 750px) {
     .container {
         padding: 4rem;
     }
 
 }
 
-@media screen and(max-width: 450px) {
+@media only screen and(max-width: 450px) {
     .container {
         padding: 0.5rem;
     }

@@ -26,8 +26,9 @@
       "Nerátaj s tým.", "Moja odpoveď je nie.", "Moje zdroje tvrdia nie.", "Nevyzerá to dobre.", "Veľmi pochybné."
     ]
   },
-  "match": {
-    "menu": "Zápalky"
+  "matches": {
+    "menu": "Zápalky",
+    "oversize": "Príliš veľa zápaliek"
   },
   "crossroads": {
     "menu": "Križovatka"

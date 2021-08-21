@@ -1,0 +1,78 @@
+
+.matchInputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.matchInputContainer img {
+    width: 50%;
+}
+
+.matchInputContainer span {
+    text-align: left;
+}
+
+.flexContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #262626;
+    padding-top: 1.5rem;
+}
+
+#matchContainer {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+.hiddenMatch {
+    transform: translateX(-200px);
+    transition: all 1s ease-in-out;
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.numberInput button {
+    outline:none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.numberInput button.minus:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f068';
+    color: #fff;
+}
+
+.numberInput button.plus:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f067';
+    color: #fff;
+}
+
+.primary {
+    margin-top: 0;
+}
