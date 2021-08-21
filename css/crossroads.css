@@ -1,0 +1,14 @@
+
+#crossroadsContainer {
+    position: relative;
+    width: 200px;
+    height: 350px;
+    transform-origin: center bottom;
+}
+
+.arrow {
+    position: absolute;
+    transition: all 1s ease-in-out;
+    transform: rotate(0);
+    transform-origin: center bottom;
+}
