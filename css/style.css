@@ -68,3 +68,26 @@ input {
     border: 0;
     border-radius: 8px;
 }
+
+.iconContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.iconContainer a {
+    padding: 1rem;
+}
+
+
+@media screen and(max-width: 750px) {
+    .container {
+        padding: 4rem;
+    }
+
+}
+
+@media screen and(max-width: 450px) {
+    .container {
+        padding: 0.5rem;
+    }
+}
