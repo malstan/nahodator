@@ -33,13 +33,14 @@
     margin-top: 3rem;
 }
 
-#question {
-    color: #fff;
-    margin-top: 1rem;
+#magicBallForm .primary {
+    margin-top: 3rem;
 }
 
 .shaking {
-    animation: shake 1s ease-in-out forwards;
+    -webkit-animation: shake 1s ease-in-out 0s forwards normal;
+    -moz-animation: shake 1s ease-in-out 0s forwards normal;
+    animation: shake 1s ease-in-out 0s forwards normal;
 }
 
 @keyframes shake {

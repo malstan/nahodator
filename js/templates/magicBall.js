@@ -15,7 +15,6 @@ class MagicBall {
         return `
             <div class="container"> 
             <div id="magicBallImg"><span id="answer"></span></div>
-            <div id="question"></div>
               <form id="magicBallForm">
                 <input type="text" name="question" placeholder="${lang.question}" autocomplete="off"/>
                 <div class="error" id="magicBallError"></div>
@@ -31,7 +30,6 @@ class MagicBall {
         const form = document.querySelector('#magicBallForm');
         const image = document.querySelector('#magicBallImg');
         const error = document.querySelector('#magicBallError');
-        const questionElm = document.querySelector('#question');
         const answerElm = document.querySelector('#answer');
         const answers = lang.answers;
 
@@ -47,7 +45,7 @@ class MagicBall {
             return;
         }
 
-        questionElm.innerText = question;
+        form.elements['question'].placeholder = question;
 
         // animation
         image.classList.add("shaking");
