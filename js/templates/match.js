@@ -58,7 +58,6 @@ class Match {
         }
 
         this.generateMatches(noBurned, burned);
-
     }
 
     generateMatches(noBurned, burned) {
