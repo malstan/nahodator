@@ -31,6 +31,7 @@ main {
     font-family: Roboto, sans-serif;
     color: #d5d5d5;
     font-size: 1.3rem;
+    padding: 8rem
 }
 
 .container p {
@@ -78,15 +79,13 @@ input {
     padding: 1rem;
 }
 
-
-@media only screen and(max-width: 750px) {
+@media only screen and (max-width: 750px) {
     .container {
         padding: 4rem;
     }
-
 }
 
-@media only screen and(max-width: 450px) {
+@media only screen and (max-width: 450px) {
     .container {
         padding: 0.5rem;
     }
