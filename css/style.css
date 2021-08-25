@@ -80,6 +80,35 @@ input {
     padding: 1rem;
 }
 
+#info {
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+#info:hover {
+    color: #00a30a;
+}
+
+.alert {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #95de9c;
+    color: #333;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
 @media only screen and (max-width: 750px) {
     .container {
         padding: 4rem;

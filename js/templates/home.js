@@ -14,8 +14,8 @@ class Home {
               <p>${lang.info}</p>
               <p>${lang.warning}</p>
               <p class="iconContainer">
-                <a class="link" href="#"><i class="fab fa-lg fa-github"></i></a>
-                <a class="link" href="#"><i class="fab fa-lg fa-android"></i></a>
+                <a class="link" href="https://github.com/stenllysb/nahodator"><i class="fab fa-lg fa-github"></i></a>
+                <a class="link" href="./figures/app/nahodator-1.5.1.apk"><i class="fab fa-lg fa-android"></i></a>
               </p>
             </div>
         `;

@@ -10,10 +10,16 @@ class RandomNumber {
 
         // form submit -> get random number
         document.querySelector('#randomNumberForm').onsubmit = event => this.generate(lang, event);
+
+        document.querySelector('#info').onclick = () => document.querySelector('.alert').style.display = "inherit";
     }
 
     getContent(lang) {
         return `
+            <div id="info"><i class="far fa-question-circle"></i></div>
+            <div class="alert" onclick="this.style.display = 'none'">
+              <strong>Info.</strong> ${lang.info}
+            </div>
             <div class="container">
               <form id="randomNumberForm">
                 <input type="number" name="min" placeholder="Min"/>

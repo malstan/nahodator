@@ -7,19 +7,22 @@
   },
   "coin": {
     "menu": "Minca",
-    "button": "Zatoč"
+    "button": "Zatoč",
+    "info": "Hod mincou."
   },
   "randomNumber": {
     "menu": "Náhodné číslo",
     "getNumber": "Daj číslo",
     "missingNumber": "Chýba číslo",
     "numberMishmash": "Čísla sú opačne",
-    "largeNumber": "Veľmi veľké číslo"
+    "largeNumber": "Veľmi veľké číslo",
+    "info": "Zadaj rozsah čísel, z ktorého má byť vygenerované číslo. (max 19 miest)"
   },
   "magicBall": {
     "menu": "Magic 8 Ball",
     "ballButton": "Zatras",
     "question": "Opýtaj sa otázku",
+    "info": "Zadaj otázku typu áno/nie a magická guľa ti povie odpoveď.",
     "answers": [
       "Je to isté.", "Je to rozhodne tak.", "Bezpochýb.", "Áno, určite.", "Spoľahni sa.", "Ako vidím, áno.", "Pravdepodobne.", "Vyzerá to dobre.", "Áno.", "Znamenia ukazujú na áno.",
       "Je to zahmlené.", "Skús neskôr.", "Teraz radšej nepoviem.", "Teraz sa nedá predpovedať.", "Sústreď sa a spýtaj sa znova.",
@@ -28,9 +31,11 @@
   },
   "matches": {
     "menu": "Zápalky",
-    "oversize": "Príliš veľa zápaliek"
+    "oversize": "Príliš veľa zápaliek",
+    "info": "Rovnaký princíp ako ťahanie špáratok - kratšie/dlhšie = vypálená/nevypálená."
   },
   "crossroads": {
-    "menu": "Križovatka"
+    "menu": "Križovatka",
+    "info": "Zadaj počet možných ciest a zelená šípka ti ukáže ktorou máš ísť."
   }
 }

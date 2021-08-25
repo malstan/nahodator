@@ -6,10 +6,16 @@ class Match {
         document.querySelector(targetElm).innerHTML = this.getContent(lang);
 
         document.querySelector('#matchForm').onsubmit = event => this.handleMatches(lang, event);
+
+        document.querySelector('#info').onclick = () => document.querySelector('.alert').style.display = "inherit";
     }
 
     getContent(lang) {
         return `
+            <div id="info"><i class="far fa-question-circle"></i></div>
+            <div class="alert" onclick="this.style.display = 'none'">
+              <strong>Info.</strong> ${lang.info}
+            </div>
             <div class="container">
               <div id="matchContainer">
               

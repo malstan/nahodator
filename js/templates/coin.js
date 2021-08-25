@@ -4,14 +4,21 @@
 class Coin {
 
     render(targetElm) {
-        document.querySelector(targetElm).innerHTML = this.getContent(JSON.parse(localStorage.language).coin);
+        const lang = JSON.parse(localStorage.language).coin;
+        document.querySelector(targetElm).innerHTML = this.getContent(lang);
 
         // button click -> flip coin
         document.querySelector('#coinTrigger').onclick = this.flip;
+
+        document.querySelector('#info').onclick = () => document.querySelector('.alert').style.display = "inherit";
     }
 
     getContent(lang) {
         return `
+            <div id="info"><i class="far fa-question-circle"></i></div>
+            <div class="alert" onclick="this.style.display = 'none'">
+              <strong>Info.</strong> ${lang.info}
+            </div>
             <div class="container">
               <div id="coin">
                 <div class="side front"></div>
