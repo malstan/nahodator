@@ -4,7 +4,7 @@
 class Coin {
 
     render(targetElm) {
-        const lang = JSON.parse(localStorage.language).coin;
+        const lang = JSON.parse(localStorage.languageContent).coin;
 
         document.querySelector(targetElm).innerHTML = this.getContent(lang);
 

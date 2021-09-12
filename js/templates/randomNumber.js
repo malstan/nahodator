@@ -4,7 +4,7 @@
 class RandomNumber {
 
     render(targetElm) {
-        const lang = JSON.parse(localStorage.language).randomNumber;
+        const lang = JSON.parse(localStorage.languageContent).randomNumber;
 
         document.querySelector(targetElm).innerHTML = this.getContent(lang);
 
@@ -54,6 +54,8 @@ class RandomNumber {
             error.innerText = `${lang.numberMishmash}`;
         else if (min.length > 19 || max.length > 19)
             error.innerText = `${lang.largeNumber}`;
+        else if (min === max)
+            error.innerText = `${lang.sameNumbers}`;
         else {
             // set random number
             const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);

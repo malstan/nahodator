@@ -4,7 +4,7 @@
 class Home {
     
     render(targetElm) {
-        document.querySelector(targetElm).innerHTML = this.getContent(JSON.parse(localStorage.language).home);
+        document.querySelector(targetElm).innerHTML = this.getContent(JSON.parse(localStorage.languageContent).home);
     }
 
     getContent(lang) {

@@ -3,8 +3,48 @@
  * @param language
  * @returns {Promise<void>}
  */
-export default async function translate(language) {
-    await fetch(`./js/language/${language}.json`)
-        .then(response => response.json())
-        .then(data => localStorage.setItem('language', JSON.stringify(data)));
+class Translate {
+
+    async init() {
+        if (localStorage.getItem("language") === null) {
+            await this.translatePage('sk');
+            document.querySelector('#language').innerText = "EN";
+            localStorage.setItem('language', 'en');
+        } else {
+            document.querySelector('#language').innerText = localStorage.getItem('language').toUpperCase();
+        }
+
+        document.querySelector('#language').addEventListener("click", this.switchLanguage);
+    }
+
+    /**
+     * fetch language
+     * @param language
+     */
+    translatePage = async (language) => {
+         await fetch(`./js/language/${language}.json`)
+            .then(response => response.json())
+            .then(data => localStorage.setItem('languageContent', JSON.stringify(data)))
+    }
+
+    /**
+     *
+     */
+    switchLanguage = async () => {
+        const langSwitch = document.querySelector('#language');
+        const lang = langSwitch.innerText;
+
+        console.log(lang);
+        if (lang === 'SK') {
+            await this.translatePage('sk');
+            localStorage.setItem('language', 'en');
+        } else {
+            await this.translatePage('en');
+            localStorage.setItem('language', 'sk');
+        }
+
+        window.location.reload();
+    }
 }
+
+export default new Translate();

@@ -80,7 +80,7 @@ input {
     padding: 1rem;
 }
 
-#info {
+#info, #language {
     color: #fff;
     font-size: 2rem;
     position: absolute;
@@ -90,8 +90,14 @@ input {
     cursor: pointer;
 }
 
-#info:hover {
+#info:hover, #language:hover {
     color: #00a30a;
+}
+
+#language {
+    font-size: 1.5rem;
+    right: 0;
+    left: unset;
 }
 
 .alert {
@@ -106,7 +112,7 @@ input {
     color: #333;
     font-size: 1.2rem;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 @media only screen and (max-width: 750px) {

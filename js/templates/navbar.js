@@ -4,7 +4,7 @@
 class Navbar {
 
     render() {
-        document.querySelector('#header').innerHTML = this.getContent(JSON.parse(localStorage.language));
+        document.querySelector('#header').innerHTML = this.getContent(JSON.parse(localStorage.languageContent));
 
         const circle = document.querySelector('.material-btn');
         const content = document.querySelector('.material-content');

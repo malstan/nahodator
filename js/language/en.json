@@ -1,22 +1,42 @@
 {
   "home": {
     "menu": "Home",
-    "title": "Randomator",
-    "warning": ""
+    "title": "Randomator 5684",
+    "info": "The Randomator will help you decide in different situations. ",
+    "warning": "We do not accept liability for mental, physical, property and other damages caused by actions based on the generated value."
   },
   "coin": {
-    "menu": "Coin"
+    "menu": "Coin",
+    "button": "Flip",
+    "info": "Coin toss."
   },
   "randomNumber": {
-    "menu": "Random Number"
+    "menu": "Random number",
+    "getNumber": "Get number",
+    "missingNumber": "Number is missing.",
+    "numberMishmash": "The number are in reverse.",
+    "largeNumber": "Too large number.",
+    "sameNumbers":"Same numbers.",
+    "info": "Enter the range of numbers from which the number is to be generated. (max 19 places)"
   },
   "magicBall": {
-    "menu": "Magic 8 Ball"
+    "menu": "Magic 8 Ball",
+    "ballButton": "Shake",
+    "question": "Ask question",
+    "info": "Enter a yes / no question and the magic ball will tell you the answer.",
+    "answers": [
+      "It is certain.", "It is decidedly so.", "Without a doubt.", "Yes – definitely.", "You may rely on it.", "As I see it, yes.", "Most likely.", "Outlook good.", "Yes.", "Signs point to yes.",
+      "Reply hazy, try again.", "Ask again later.", "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again.",
+      "Don’t count on it.", "My reply is no.", "My sources say no.", "Outlook not so good.", "Very doubtful."
+    ]
   },
-  "match": {
-    "menu": "Match"
+  "matches": {
+    "menu": "Matches",
+    "oversize": "Too many matches.",
+    "info": "Same principle as pulling toothpicks - shorter / longer = burnt / unfired."
   },
   "crossroads": {
-    "menu": "Crossroads"
+    "menu": "Crossroads",
+    "info": "Enter the number of possible routes and the green arrow will show you which way to go."
   }
 }

@@ -4,7 +4,7 @@
 class Crossroads {
 
     render(targetElm) {
-        const lang = JSON.parse(localStorage.language).crossroads;
+        const lang = JSON.parse(localStorage.languageContent).crossroads;
 
         document.querySelector(targetElm).innerHTML = this.getContent(lang);
 

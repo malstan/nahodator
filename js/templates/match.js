@@ -4,7 +4,7 @@
 class Match {
 
     render(targetElm) {
-        const lang = JSON.parse(localStorage.language).matches;
+        const lang = JSON.parse(localStorage.languageContent).matches;
 
         document.querySelector(targetElm).innerHTML = this.getContent(lang);
 

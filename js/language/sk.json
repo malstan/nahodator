@@ -13,9 +13,10 @@
   "randomNumber": {
     "menu": "Náhodné číslo",
     "getNumber": "Daj číslo",
-    "missingNumber": "Chýba číslo",
-    "numberMishmash": "Čísla sú opačne",
-    "largeNumber": "Veľmi veľké číslo",
+    "missingNumber": "Chýba číslo.",
+    "numberMishmash": "Čísla sú opačne.",
+    "largeNumber": "Veľmi veľké číslo.",
+    "sameNumbers": "Rovnaké čísla.",
     "info": "Zadaj rozsah čísel, z ktorého má byť vygenerované číslo. (max 19 miest)"
   },
   "magicBall": {

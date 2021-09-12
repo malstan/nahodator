@@ -4,7 +4,7 @@
 class MagicBall {
 
     render(targetElm) {
-        const lang = JSON.parse(localStorage.language).magicBall;
+        const lang = JSON.parse(localStorage.languageContent).magicBall;
 
         document.querySelector(targetElm).innerHTML = this.getContent(lang);
 
