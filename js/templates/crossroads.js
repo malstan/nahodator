@@ -1,3 +1,6 @@
+/**
+ * class for crossroads handling
+ */
 class Crossroads {
 
     render(targetElm) {
@@ -5,6 +8,7 @@ class Crossroads {
 
         document.querySelector(targetElm).innerHTML = this.getContent(lang);
 
+        // submit -> generate roads
         document.querySelector('#crossroadsForm').onsubmit = event => this.handleCrossroads(lang, event);
 
         document.querySelector('#info').onclick = () => document.querySelector('.alert').style.display = "inherit";
@@ -50,16 +54,19 @@ class Crossroads {
 
         crossroadsContainer.innerHTML = "";
 
+        // center arrows
         if (crossroads%2 === 0)
             crossroadsContainer.style.transform = "rotate(-6.5deg)";
         else
             crossroadsContainer.style.transform = "rotate(0)";
 
+        // generate road
         const road = Math.floor(Math.random() * crossroads);
 
         let rotate = 0;
 
         for (let i = 0; i < crossroads; i++) {
+            // new arrow/road
             const image = document.createElement("img");
             image.classList.add("arrow");
 
@@ -68,8 +75,10 @@ class Crossroads {
             else
                 image.src = "./figures/arrow.png";
 
+            // rotate
             image.style.transform = `rotate(${rotate}deg)`;
 
+            // set next rotation
             rotate *= -1;
             if(i%2 === 0)
                 rotate +=13;

@@ -1,4 +1,6 @@
-
+/**
+ * class for navbar
+ */
 class Navbar {
 
     render() {
@@ -10,6 +12,7 @@ class Navbar {
         const hamburger = document.querySelector('.material-hamburger');
         const main = document.querySelector('main');
 
+        // button click -> show menu / close menu
         circle.addEventListener(
             'click',
             event => {
@@ -27,6 +30,7 @@ class Navbar {
             false
         );
 
+        // click somewhere -> close menu
         window.addEventListener(
             'click',
              () => {

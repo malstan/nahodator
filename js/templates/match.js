@@ -1,3 +1,6 @@
+/**
+ * class for match handling
+ */
 class Match {
 
     render(targetElm) {
@@ -5,6 +8,7 @@ class Match {
 
         document.querySelector(targetElm).innerHTML = this.getContent(lang);
 
+        // submit -> generate matches
         document.querySelector('#matchForm').onsubmit = event => this.handleMatches(lang, event);
 
         document.querySelector('#info').onclick = () => document.querySelector('.alert').style.display = "inherit";
@@ -53,11 +57,14 @@ class Match {
         const form = document.querySelector('#matchForm');
         const error = document.querySelector('#matchError');
 
+        // clear
         error.innerText = "";
 
+        // get numbers of matches
         const noBurned = form.elements['noBurned'].value;
         const burned = form.elements['burned'].value;
 
+        // too many matches
         if (parseInt(noBurned) + parseInt(burned) > 10) {
             error.innerText = `${lang.oversize}`;
             return;
@@ -70,20 +77,24 @@ class Match {
         const matchContainer = document.querySelector('#matchContainer');
         const matches = parseInt(noBurned) + parseInt(burned);
 
+        // clear
         matchContainer.innerHTML = "";
 
         let burned_indexes = [burned];
         burned_indexes.fill(-1);
 
+        // generate indexes for burned matches
         let randomIndex;
         for (let i = 0; i < burned; i++) {
             do {
                 randomIndex = Math.floor(Math.random() * matches);
             } while (burned_indexes.includes(randomIndex));
+
             burned_indexes[i] = randomIndex;
         }
 
         for (let i = 0; i < matches; i++) {
+            // new match
             const image = document.createElement("img");
             image.classList.add("hiddenMatch");
 

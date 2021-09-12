@@ -5,6 +5,7 @@ class Coin {
 
     render(targetElm) {
         const lang = JSON.parse(localStorage.language).coin;
+
         document.querySelector(targetElm).innerHTML = this.getContent(lang);
 
         // button click -> flip coin

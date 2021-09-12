@@ -8,6 +8,7 @@ class MagicBall {
 
         document.querySelector(targetElm).innerHTML = this.getContent(lang);
 
+        // submit -> generate answer
         document.querySelector('#magicBallForm').onsubmit = event => this.getAnswer(lang, event);
 
         document.querySelector('#info').onclick = () => document.querySelector('.alert').style.display = "inherit";
