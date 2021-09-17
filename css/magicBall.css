@@ -56,3 +56,10 @@
 
     100% { transform: translateX(0); }
 }
+
+@media only screen and (max-width: 450px) {
+    #magicBallImg {
+        width: 240px;
+        height: 235px;
+    }
+}

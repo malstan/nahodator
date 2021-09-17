@@ -5,5 +5,14 @@ import Routes from "./routes.js";
 
 await Translate.init();
 
-Navbar.render();
 window.router = new ParamHashRouter(Routes);
+
+Navbar.render();
+
+window.addEventListener("load",function() {
+    // Set a timeout...
+    setTimeout(function(){
+        // Hide the address bar!
+        window.scrollTo(0, 1);
+    }, 0);
+});

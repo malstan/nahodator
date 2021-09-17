@@ -10,9 +10,8 @@ class Translate {
             await this.translatePage('sk');
             document.querySelector('#language').innerText = "EN";
             localStorage.setItem('language', 'en');
-        } else {
+        } else
             document.querySelector('#language').innerText = localStorage.getItem('language').toUpperCase();
-        }
 
         document.querySelector('#language').addEventListener("click", this.switchLanguage);
     }
@@ -34,7 +33,6 @@ class Translate {
         const langSwitch = document.querySelector('#language');
         const lang = langSwitch.innerText;
 
-        console.log(lang);
         if (lang === 'SK') {
             await this.translatePage('sk');
             localStorage.setItem('language', 'en');

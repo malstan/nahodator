@@ -19,20 +19,23 @@ a {
     color: #00d30a;
 }
 
-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-.container {
-    max-width: 100%;
-    text-align: center;
+body {
     font-family: Roboto, sans-serif;
     color: #d5d5d5;
     font-size: 1.3rem;
-    padding: 8rem
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    text-align: center;
+}
+
+.container {
+    margin: 7rem 5rem 5rem 5rem;
 }
 
 .container p {
@@ -45,11 +48,12 @@ main {
     background: #00a30a;
     font-size: 1.8rem;
     padding: 13px 18px;
-    margin-top: 5rem;
     cursor: pointer;
     color: #333;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     transition: all 0.35s ease-out;
+    width: fit-content;
+    margin: 5rem auto 0 auto ;
 }
 
 .primary:hover {
@@ -64,11 +68,12 @@ main {
 
 input {
     text-align: center;
-    margin: 1rem 0;
+    margin: 1rem auto;
     padding: 10px 15px;
     font-size: 1.5rem;
     border: 0;
     border-radius: 8px;
+    width: 40%;
 }
 
 .iconContainer {
@@ -112,17 +117,26 @@ input {
     color: #333;
     font-size: 1.2rem;
     cursor: pointer;
-    border-radius: 12px;
+    text-align: left;
+    border-radius: 8px;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 768px) {
     .container {
-        padding: 4rem;
+        margin: 5rem 3rem;
     }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 480px) {
     .container {
-        padding: 0.5rem;
+        margin: 2rem 1rem;
+    }
+
+    .primary {
+        margin-top: 2rem;
+    }
+
+    input {
+        width: 80%;
     }
 }

@@ -17,21 +17,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 100%;
+    width: 90%;
     border-top: 1px solid #262626;
     padding-top: 1.5rem;
+    margin: 0 auto;
 }
 
 #matchContainer {
-    margin-bottom: 1.5rem;
+    margin: 3.5rem 0 0.5rem 0;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
 
-
 .hiddenMatch {
-    width: 90%;
+    width: 50%;
     transform: translateX(-30%);
     transition: all 1s ease-in-out;
 }
@@ -47,6 +47,10 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
 
+.numberInput input {
+    width: 2rem;
+}
+
 .numberInput button {
     outline:none;
     -webkit-appearance: none;
@@ -54,8 +58,8 @@ input[type=number]::-webkit-outer-spin-button {
     border: none;
     align-items: center;
     justify-content: center;
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     cursor: pointer;
     margin: 1rem 0;
     position: relative;
@@ -77,4 +81,20 @@ input[type=number]::-webkit-outer-spin-button {
 
 .flexContainer .primary {
     margin-top: 0;
+}
+
+@media only screen and (max-width: 480px) {
+    .matchInputContainer img {
+        width: 70%;
+    }
+
+    .hiddenMatch {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hiddenMatch {
+        width: 80%;
+    }
 }
