@@ -3,11 +3,9 @@ import Translate from "./language/translate.js";
 import ParamHashRouter from "./paramHashRouter.js";
 import Routes from "./routes.js";
 
-await Translate.init();
-
-window.router = new ParamHashRouter(Routes);
-
-Navbar.render();
+Translate.init()
+    .then(() => window.router = new ParamHashRouter(Routes))
+    .then(() => Navbar.render());
 
 window.addEventListener("load",function() {
     // Set a timeout...
