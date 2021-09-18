@@ -5,12 +5,5 @@ import Routes from "./routes.js";
 
 Translate.init()
     .then(() => window.router = new ParamHashRouter(Routes))
-    .then(() => Navbar.render());
-
-window.addEventListener("load",function() {
-    // Set a timeout...
-    setTimeout(function(){
-        // Hide the address bar!
-        window.scrollTo(0, 1);
-    }, 0);
-});
+    .then(() => Navbar.render())
+    .then(() => window.scrollTo(0,1));
