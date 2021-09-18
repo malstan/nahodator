@@ -44,13 +44,13 @@ class RandomNumber {
         randomNumberElm.innerText = "";
 
         // get numbers from input
-        const min = form.elements["min"].value;
-        const max = form.elements["max"].value;
+        const min = parseInt(form.elements["min"].value);
+        const max = parseInt(form.elements["max"].value);
 
         // check
-        if (min === "" || max === "")
+        if (isNaN(min) || isNaN(max))
             error.innerText = `${lang.missingNumber}`;
-        else if (parseInt(min) > parseInt(max))
+        else if (min > max)
             error.innerText = `${lang.numberMishmash}`;
         else if (min.length > 19 || max.length > 19)
             error.innerText = `${lang.largeNumber}`;
@@ -58,7 +58,8 @@ class RandomNumber {
             error.innerText = `${lang.sameNumbers}`;
         else {
             // set random number
-            const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+            console.log(min, max);
+            const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
             randomNumberElm.innerText = `${randomNumber}`;
         }
     }

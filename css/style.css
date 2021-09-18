@@ -64,6 +64,8 @@ main {
     background: rgba(255, 139, 139, 0.84);
     border-radius: 8px;
     color: #fff;
+    width: 50%;
+    margin: 0 auto;
 }
 
 input {
@@ -125,6 +127,10 @@ input {
     .container {
         margin: 5rem 3rem;
     }
+
+    .error {
+        width: 75%;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -138,5 +144,9 @@ input {
 
     input {
         width: 80%;
+    }
+
+    .error {
+        width: 90%;
     }
 }
