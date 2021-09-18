@@ -18,7 +18,7 @@ class Crossroads {
         return `
             <div id="info"><i class="far fa-question-circle"></i></div>
             <div class="alert" onclick="this.style.display = 'none'">
-              <strong>Info.</strong> ${lang.info}
+              <strong>Info:</strong> ${lang.info}
             </div>
             <div class="container">
               <div id="crossroadsContainer">
