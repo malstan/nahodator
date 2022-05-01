@@ -1,3 +1,3 @@
 # nahodator
 
-https://stenllysb.github.io/nahodator
+https://malstan.github.io/nahodator
