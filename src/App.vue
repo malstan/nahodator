@@ -1,30 +1,18 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <BurgerMenu />
+  
+  <div class="h-screen w-full flex items-center dark:bg-stone-800 text-stone-900 dark:text-stone-300">
+    <router-view/>
+  </div>
 </template>
+
+<script setup>
+import BurgerMenu from "./components/BurgerMenu.vue";
+</script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  font-family: Roboto, Helvetica, Arial, sans-serif;
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>
