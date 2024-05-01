@@ -4,6 +4,9 @@
 
 @layer components {
     .btn-primary {
-        @apply bg-primaryDarker hover:bg-primary disabled:bg-primaryDarker font-bold py-2 px-6 rounded ease-in-out duration-200;
+        @apply bg-primaryDarker hover:bg-primary disabled:bg-primaryDarker text-lg font-bold py-2 px-6 rounded ease-in-out duration-200;
+    }
+    .input-primary {
+        @apply py-3 px-4 text-lg rounded text-stone-700 ease-in-out duration-150 focus:outline-none
     }
 }
