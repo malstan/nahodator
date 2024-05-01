@@ -7,6 +7,15 @@
         @apply bg-primaryDarker hover:bg-primary disabled:bg-primaryDarker text-lg font-bold py-2 px-6 rounded ease-in-out duration-200;
     }
     .input-primary {
-        @apply py-3 px-4 text-lg rounded text-stone-700 ease-in-out duration-150 focus:outline-none
+        @apply py-3 px-4 text-lg rounded text-stone-700 ease-in-out duration-150 focus:outline-none text-center
     }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
 }
