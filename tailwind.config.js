@@ -9,6 +9,10 @@ module.exports = {
         primaryDarker: "#0b6e11",
         primaryLighter: "#00d30a",
       },
+      backgroundImage: {
+        "coin-front": "url('assets/coin-front.png')",
+        "coin-back": "url('assets/coin-back.png')",
+      },
     },
   },
   plugins: [],
