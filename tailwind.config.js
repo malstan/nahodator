@@ -12,6 +12,10 @@ module.exports = {
       backgroundImage: {
         "coin-front": "url('assets/coin-front.png')",
         "coin-back": "url('assets/coin-back.png')",
+        "magic-ball": "url('assets/ball.png')",
+      },
+      screens: {
+        xs: "475px",
       },
     },
   },
