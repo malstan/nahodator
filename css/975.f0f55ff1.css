@@ -1,0 +1,1 @@
+.shaking{animation:shake 1s ease-in-out 0s normal forwards}@keyframes shake{0%{transform:translateX(0)}20%{transform:translateX(20px)}40%{transform:translateX(-20px)}60%{transform:translateX(20px)}80%{transform:translateX(-20px)}to{transform:translateX(0)}}
