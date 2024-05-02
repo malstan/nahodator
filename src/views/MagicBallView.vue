@@ -1,6 +1,6 @@
 <template>
 
-    <div class="container text-center"> 
+    <div class="container text-center mx-auto"> 
         <div :class="ballShaking && 'shaking'" class="h-[17.8125rem] max-xs:h-[14.6875rem] w-[18.125rem] max-xs:w-[15rem] mx-auto bg-magic-ball bg-center bg-cover flex justify-center items-center">
             <span v-if="answer" class="w-[8.125rem] aspect-square bg-white rounded-full text-center flex justify-center items-center text-stone-700 ml-1">{{ answer }}</span>
         </div>

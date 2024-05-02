@@ -13,7 +13,7 @@
                     <img class="mx-auto max-w-[15.3125rem] max-xs:max-w-[12.5rem]" src="../assets/match-no-burned.png" alt="no burned match">
                     <div class="flex justify-center align-center gap-3 mb-8 mt-4">
                         <button><MinusCircleIcon @click="notBurned > limits.min && notBurned--" class="size-12 max-xs:size-8"/></button>
-                        <input type="number" name="noBurned" readonly v-model="notBurned" class="input-primary max-w-24 max-xs:max-w-18 max">
+                        <input type="number" name="noBurned" readonly v-model="notBurned" class="input-primary max-w-24 max-xs:max-w-18">
                         <button><PlusCircleIcon @click="(canAdd() && notBurned < limits.max) && notBurned++" class="size-12 max-xs:size-8"/></button>
                     </div> 
 
@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 
-                <button class="primary" @click="matchesSubmited"><ArrowPathIcon class="size-32 max-xs:size-20"/></button>
+                <button @click="matchesSubmited"><ArrowPathIcon class="size-32 max-xs:size-20"/></button>
             </div>
             
             <div class="text-lg text-red-600 my-6">{{errorMessage}}</div>
@@ -34,7 +34,7 @@
     </div>
 </template>
 <script setup>
-import { ref, watch } from "vue";
+import { ref } from "vue";
 
 import {PlusCircleIcon, MinusCircleIcon, ArrowPathIcon } from '@heroicons/vue/24/outline'
 

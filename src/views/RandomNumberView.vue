@@ -1,8 +1,8 @@
 <template>
     <div class="container mx-auto text-center">
         <div class="flex flex-col justify-center gap-4 items-center mb-6">
-            <input type="number" name="min" placeholder="Min" class="input-primary text-center" v-model="minNumber"/>
-            <input type="number" name="max" placeholder="Max" class="input-primary text-center" v-model="maxNumber"/>
+            <input type="number" name="min" placeholder="Min" class="input-primary" v-model="minNumber"/>
+            <input type="number" name="max" placeholder="Max" class="input-primary" v-model="maxNumber"/>
         </div>
         <div class="text-lg text-red-600">{{numberError}}</div>
         <div class="text-4xl">{{randomNumber}}</div>
