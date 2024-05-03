@@ -1,5 +1,5 @@
 <template>
-    <div class="container text-center mx-auto h-full flex flex-col justify-between pb-12 pt-24">
+    <div class="container text-center mx-auto h-full flex flex-col justify-between pb-12">
         <div class="mb-6 relative">
             <img v-for="(match, index) of matches" :key="index" :src="match.image" alt="zápalka" class="ease-out duration-700 my-2 cursor-pointer" :class="match.hidden && '-translate-x-1/3'" @click="showMatch(index)">
 

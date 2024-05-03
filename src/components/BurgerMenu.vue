@@ -1,6 +1,6 @@
 <template>
   <nav >
-    <div class="flex flex-col gap-1 absolute top-6 right-6 z-30 cursor-pointer" @click="clickToToggle">
+    <div class="flex flex-col gap-1 fixed top-6 right-6 z-30 cursor-pointer" @click="clickToToggle">
         <span :class="isOpen ? 'invisible ' : 'visible'" class="w-8 h-1 block bg-stone-800 dark:bg-stone-300"></span>
         <span class="w-8 h-1 block bg-stone-800 dark:bg-stone-300"></span>
         <span :class="isOpen ? 'invisible ' : 'visible'" class="w-8 h-1 block bg-stone-800 dark:bg-stone-300"></span>

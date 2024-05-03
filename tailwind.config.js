@@ -8,6 +8,7 @@ module.exports = {
         primary: "#00a30a",
         primaryDarker: "#0b6e11",
         primaryLighter: "#00d30a",
+        "stone-750": "#3b3835",
       },
       backgroundImage: {
         "coin-front": "url('assets/coin-front.png')",

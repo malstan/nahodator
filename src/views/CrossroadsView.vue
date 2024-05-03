@@ -1,7 +1,7 @@
 <template>
     <div class="container text-center mx-auto h-full flex flex-col justify-around pb-12 pt-24">
-        <div class="relative origin-bottom w-full h-[25rem]" :style="crossroadsAngle > 0 && 'transform: rotate(-' + crossroadsAngle + 'deg)'">
-              <img v-for="(arrow, index) of arrows" :key="index" :src="arrow.image" alt="šípka" class="absolute left-[41%] duration-1000 ease-in-out origin-bottom " :style="'transform: rotate(' + arrow.rotate + 'deg)'">
+        <div class="relative origin-bottom w-full sm:h-[25rem] h-[23rem]" :style="crossroadsAngle > 0 && 'transform: rotate(-' + crossroadsAngle + 'deg)'">
+              <img v-for="(arrow, index) of arrows" :key="index" :src="arrow.image" alt="šípka" class="absolute sm:left-[41%] left-[50%] duration-1000 ease-in-out origin-bottom sm:w-auto w-10" :style="'transform: rotate(' + arrow.rotate + 'deg)'">
         </div>
               
         <div  class="flex justify-center items-center gap-24 max-xs:gap-6">
