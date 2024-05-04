@@ -9,7 +9,7 @@
       <router-link to="/coin" class="bg-stone-200 dark:bg-stone-750 text-center lg:py-20 md:py-14 sm:py-12 py-8 rounded-2xl hover:scale-105 duration-200 ease-in-out">
         <span class="lg:text-4xl md:text-3xl sm:text-xl text-2xl text-primary dark:text-primaryDarker font-bold">Hod mincou</span>
       </router-link>
-      <router-link to="/random-number" class="bg-stone-200 dark:bg-stone-750 text-center lg:py-20 md:py-14 sm:py-12 py-8 rounded-2xl hover:scale-105 duration-200 ease-in-out">
+      <router-link to="/random" class="bg-stone-200 dark:bg-stone-750 text-center lg:py-20 md:py-14 sm:py-12 py-8 rounded-2xl hover:scale-105 duration-200 ease-in-out">
         <span class="lg:text-4xl md:text-3xl sm:text-xl text-2xl text-primary dark:text-primaryDarker font-bold">Náhodné číslo</span>
       </router-link>
       <router-link to="/magicball" class="bg-stone-200 dark:bg-stone-750 text-center lg:py-20 md:py-14 sm:py-12 py-8 rounded-2xl hover:scale-105 duration-200 ease-in-out">
