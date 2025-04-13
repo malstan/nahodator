@@ -19,19 +19,32 @@ const maxNumber = ref( '' )
 const numberError = ref( '' )
 const randomNumber = ref( '' )
 
+const conditions = [
+    {
+        condition: minNumber.value === '' || maxNumber.value === '',
+        message: 'Chýba číslo.'
+    },
+    {
+        condition: minNumber.value > maxNumber.value,
+        message: 'Vymeň čísla.'
+    },
+    {
+        condition: minNumber.value === maxNumber.value,
+        message: 'Čísla sú rovnaké.'
+    },
+    {
+        condition: minNumber.value.toString().length > 16 || maxNumber.value.toString().length > 16,
+        message: 'Veľmi veľké číslo.'
+    },
+]
+
 function generateNumber() {
     numberError.value = '';
     randomNumber.value = '';
 
-    if (minNumber.value === '' || maxNumber.value === '')
-        numberError.value = 'Chýba číslo.';
-    else if (minNumber.value > maxNumber.value)
-        numberError.value = 'Vymeň čísla.';
-    else if (minNumber.value === maxNumber.value)
-        numberError.value = 'Čísla sú rovnaké.';
-    else if (minNumber.value.toString().length > 16 || maxNumber.value.toString().length > 16)
-        numberError.value = 'Veľmi veľké číslo.';
-    else
-        randomNumber.value = Math.floor(Math.random() * (maxNumber.value - minNumber.value + 1)) + minNumber.value
+    conditions.forEach(condition => {
+        if(condition.condition) errorMessage.value = condition.message
+        else randomNumber.value = Math.floor(Math.random() * (maxNumber.value - minNumber.value + 1)) + minNumber.value
+    })
 }
 </script>
