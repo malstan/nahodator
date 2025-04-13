@@ -43,7 +43,7 @@ function generateNumber() {
     randomNumber.value = '';
 
     conditions.forEach(condition => {
-        if(condition.condition) errorMessage.value = condition.message
+        if(condition.condition) numberError.value = condition.message
         else randomNumber.value = Math.floor(Math.random() * (maxNumber.value - minNumber.value + 1)) + minNumber.value
     })
 }
