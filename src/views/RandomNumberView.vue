@@ -14,37 +14,41 @@
 import { ref } from "vue";
 
 const minNumber = ref('')
-const maxNumber = ref( '' )
+const maxNumber = ref('')
 
 const numberError = ref( '' )
 const randomNumber = ref( '' )
-
-const conditions = [
-    {
-        condition: minNumber.value === '' || maxNumber.value === '',
-        message: 'Chýba číslo.'
-    },
-    {
-        condition: minNumber.value > maxNumber.value,
-        message: 'Vymeň čísla.'
-    },
-    {
-        condition: minNumber.value === maxNumber.value,
-        message: 'Čísla sú rovnaké.'
-    },
-    {
-        condition: minNumber.value.toString().length > 16 || maxNumber.value.toString().length > 16,
-        message: 'Veľmi veľké číslo.'
-    },
-]
 
 function generateNumber() {
     numberError.value = '';
     randomNumber.value = '';
 
-    conditions.forEach(condition => {
-        if(condition.condition) numberError.value = condition.message
-        else randomNumber.value = Math.floor(Math.random() * (maxNumber.value - minNumber.value + 1)) + minNumber.value
-    })
+    const conditions = [
+        {
+            condition: minNumber.value === '' || maxNumber.value === '',
+            message: 'Chýba číslo.'
+        },
+        {
+            condition: Number(minNumber.value) > Number(maxNumber.value),
+            message: 'Vymeň čísla.'
+        },
+        {
+            condition: Number(minNumber.value) === Number(maxNumber.value),
+            message: 'Čísla sú rovnaké.'
+        },
+        {
+            condition: minNumber.value.toString().length > 16 || maxNumber.value.toString().length > 16,
+            message: 'Veľmi veľké číslo.'
+        },
+    ];
+
+    for (const condition of conditions) {
+        if (condition.condition) {
+            numberError.value = condition.message;
+            return; 
+        }
+    }
+
+    randomNumber.value = Math.floor(Math.random() * (Number(maxNumber.value) - Number(minNumber.value) + 1)) + Number(minNumber.value);
 }
 </script>
